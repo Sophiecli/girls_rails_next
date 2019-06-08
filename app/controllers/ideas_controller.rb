@@ -1,4 +1,5 @@
 
+
 # INDEX OF ALL IDEAS LISTED 
 %w(/ /ideas).each do |path|
   get path do
