@@ -1,4 +1,4 @@
-<h1>Listing Ideas</h1>
+<h1>Here is a list of all ideas so far!</h1>
 
 <table>
   <thead>
@@ -16,10 +16,10 @@
       <td><%= idea.name %></td>
       <td><%= idea.description %></td>
       <td><%= idea.picture.present? %></td>
-      <td><a href="/ideas/<%= idea.id %>/edit">Edit</a></td>
-      <td><a href="/ideas/<%= idea.id %>">Show</a></td>
-      <td><% if idea.picture %><a href="/files/<%= idea.picture %>">View Picture</a><% end %></td>
-      <td><% if idea.picture %><a href="/files/<%= idea.picture %>/download">Download Picture</a><% end %></td>
+      <td><a class="btn btn-primary" href="/ideas/<%= idea.id %>/edit">Edit</a></td>
+      <td><a class="btn btn-warning" href="/ideas/<%= idea.id %>">Show</a></td>
+      <td><% if idea.picture %><a class="btn btn-info" href="/files/<%= idea.picture %>">View Picture</a><% end %></td>
+      <td><% if idea.picture %><a class="btn btn-info" href="/files/<%= idea.picture %>/download">Download Picture</a><% end %></td>
     </tr>
     <% end %>
   </tbody>

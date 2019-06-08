@@ -1,3 +1,5 @@
+
+# INDEX OF ALL IDEAS LISTED 
 %w(/ /ideas).each do |path|
   get path do
     @ideas = Idea.all
@@ -5,6 +7,7 @@
   end
 end
 
+# ADD NEW IDEA
 %w(/new /ideas/new).each do |path|
   get path do
     @title = 'New Idea'
@@ -31,6 +34,8 @@ post '/ideas' do
     erb :'ideas/new'
   end
 end
+
+# SHOW IDEA IN SEPARATE INDOW
 
 get '/ideas/:id' do 
   @idea = Idea.find(params[:id])
